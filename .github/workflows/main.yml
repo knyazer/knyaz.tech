@@ -36,11 +36,11 @@ jobs:
       - name: Build Container image (amd64)
         run: docker buildx create --use; docker buildx build --platform linux/amd64 -t ${{ secrets.DOCKER_REPO }}:amd64 .
       - name: Publish Docker image (amd64)
-        run: docker push ${{ secrets.DOCKER_REPO }}
+        run: docker push ${{ secrets.DOCKER_REPO }}:amd64
       - name: Build Container image (arm64)
         run: docker buildx build --platform linux/arm64 -t ${{ secrets.DOCKER_REPO }}:arm64 .
       - name: Publish Docker image (arm64)
-        run: docker push ${{ secrets.DOCKER_REPO }}
+        run: docker push ${{ secrets.DOCKER_REPO }}:arm64
       - name: Create manifest
         run: docker manifest create ${{ secrets.DOCKER_REPO }}:latest ${{ secrets.DOCKER_REPO }}:amd64 ${{ secrets.DOCKER_REPO }}:arm64
       - name: Push manifest
