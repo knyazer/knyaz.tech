@@ -385,8 +385,8 @@ footer
     text-align: center;
     color: #F0F0F0;
     background-color: #222;
-    padding-top: 0.4rem;
-    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
 }
 
 @media (max-width: 800px)
