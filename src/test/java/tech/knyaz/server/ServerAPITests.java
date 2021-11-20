@@ -25,4 +25,10 @@ public class ServerAPITests {
 		mockMvc.perform(get("/api/status")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(containsString("Active")));
 	}
+
+    @Test
+    public void exampleOfAnIncorrectTest() throws Exception {
+
+		mockMvc.perform(get("/api/status")).andExpect(content().string(containsString("Green banana on the table")));
+    }
 }
