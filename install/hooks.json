@@ -5,7 +5,7 @@
     "pass-arguments-to-command": [
     {
       "source": "string",
-      "name": "/home/opc/server/redeploy.sh"
+      "name": "{ROOT}/redeploy.sh"
     }],
     "command-working-directory": "",
     "response-message": "Redeploying server.",
