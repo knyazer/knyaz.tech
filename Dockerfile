@@ -5,7 +5,7 @@ COPY pom.xml /workspace
 COPY src /workspace/src
 RUN mvn -B package --file pom.xml -DskipTests
 
-COPY /workspace/target/*.jar app.jar
+RUN cp /workspace/target/*.jar app.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","app.jar"]
