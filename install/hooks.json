@@ -1,0 +1,13 @@
+[
+    {
+      "id": "redeploy",
+      "execute-command": "/bin/sh",
+      "pass-arguments-to-command": [
+      {
+        "source": "string",
+        "name": "{ROOT}/redeploy.sh"
+      }],
+      "command-working-directory": "",
+      "response-message": "Redeploying server."
+    }
+  ]
