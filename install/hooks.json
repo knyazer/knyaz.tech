@@ -1,13 +1,26 @@
 [
+  {
+    "id": "redeploy",
+    "execute-command": "/bin/sh",
+    "pass-arguments-to-command": [
     {
-      "id": "redeploy",
-      "execute-command": "/bin/sh",
-      "pass-arguments-to-command": [
+      "source": "string",
+      "name": "/home/opc/server/redeploy.sh"
+    }],
+    "command-working-directory": "",
+    "response-message": "Redeploying server.",
+    "trigger-rule":
+    {
+      "match":
       {
-        "source": "string",
-        "name": "{ROOT}/redeploy.sh"
-      }],
-      "command-working-directory": "",
-      "response-message": "Redeploying server."
+        "type": "value",
+        "value": "{WEBHOOK_ACCESS_TOKEN}",
+        "parameter":
+        {
+          "source": "url",
+          "name": "token"
+        }
+      }
     }
-  ]
+  }
+]

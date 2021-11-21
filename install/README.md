@@ -5,6 +5,7 @@ This folder should be installed on the server, simply by copying it into some di
 - Replace *{ROOT}* in **hooks.json** with absolute path to the server directory (e.g. /home/user/server)
 - Replace *cert.pfx* and *password* in **ssl_application.properties** with your filenames
 - Add to the root your SSL certificate in PKCS12 format with name *cert.pfx*
+- Replace *{WEBHOOK_ACCESS_TOKEN}* in **hooks.json** with your webhook access token
 
 ### Structure
 **Dockerfile** - provides new docker container based on the knyazer/knyaz-tech-spring-boot on DockerHub but with SSL support

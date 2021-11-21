@@ -42,4 +42,4 @@ jobs:
     needs: [build-docker-image]
     steps:
       - name: Curl the redeploy webhook
-        run: curl -I ${{ secrets.DEPLOY_WEBHOOK_URL }}
+        run: curl -I ${{ secrets.DEPLOY_WEBHOOK_URL }}?token=${{ secrets.WEBHOOK_ACCESS_TOKEN }}
