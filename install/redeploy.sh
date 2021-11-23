@@ -1,4 +1,5 @@
 #!bin/bash
+docker pull knyazer/knyaz-tech-spring-boot
 docker build -t knyaz_server .
 docker stop knyaz_server
 docker system prune -f
