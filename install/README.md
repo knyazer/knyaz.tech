@@ -9,6 +9,9 @@ This folder should be installed on the server, simply by copying it into some di
 
 ### Structure
 **Dockerfile** - provides new docker container based on the knyazer/knyaz-tech-spring-boot on DockerHub but with SSL support
+
 **hooks.json** - configuration file for webhooks 
+
 **redeploy.sh** - script which runs on webhook trigger, reloads docker container
+
 **ssl_application.properties** - Spring Boot configuration file with enabled SSL support
