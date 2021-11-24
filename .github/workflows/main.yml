@@ -41,5 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-docker-image]
     steps:
+      - name: Sleep for 30 seconds
+        run: sleep 30s
       - name: Curl the redeploy webhook
         run: curl -I ${{ secrets.DEPLOY_WEBHOOK_URL }}?token=${{ secrets.WEBHOOK_ACCESS_TOKEN }}
