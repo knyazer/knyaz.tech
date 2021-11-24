@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class APIController {
-	private String tempVariable = "No value";
+	private String tempVariable;
 
 	@GetMapping("/status")
 	public String status() {
@@ -24,7 +24,6 @@ public class APIController {
 	@GetMapping("/temp/get")
 	public String getTempVar()
 	{
-		return tempVariable;
+		return tempVariable.isEmpty() ? "None" : tempVariable;
 	}
-
 }
