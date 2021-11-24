@@ -18,7 +18,7 @@ public class APIController {
 	@GetMapping("/temp/set")
 	public String setTempVar(@RequestParam String value) {
 		tempVariable = value;
-		return "Successfully written value: " + value;
+		return "Success. New value: " + value;
 	}
 
 	@GetMapping("/temp/get")
