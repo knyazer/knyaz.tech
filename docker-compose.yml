@@ -1,0 +1,42 @@
+version: '3'
+services:
+  # Spring Boot
+  app:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    networks:
+      - app-network
+
+  # Nginx
+  nginx:
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - app-network
+  
+  # Gitbucket
+  git:
+    build:
+      context: git
+      dockerfile: Dockerfile
+    container_name: git
+    restart: unless-stopped
+    tty: true
+    networks:
+      - app-network
+
+# Docker Networks
+networks:
+  app-network:
+    driver: bridge

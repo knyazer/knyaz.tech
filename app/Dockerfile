@@ -1,4 +1,5 @@
 FROM maven:3-openjdk-17-slim
+
 RUN mkdir -p /workspace
 WORKDIR /workspace
 COPY pom.xml /workspace
