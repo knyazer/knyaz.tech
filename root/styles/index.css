@@ -118,6 +118,16 @@ body.preload *{
         align-items: center !important;
         justify-content: center !important;
     }
+
+    .link-text
+    {
+        margin: auto;
+    }
+
+    .social
+    {
+        margin-bottom: 0.4rem;
+    }
 }
 
 
