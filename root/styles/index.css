@@ -1,0 +1,250 @@
+:root
+{
+    font-size: 30px;
+    font-family: Viga;
+    --font-color-darker: #888;
+    --font-color: #ccc;
+    --font-color-lighter: #f0f0f0;
+    --background-color: #222;
+    --animation-time: 0.3s;
+}
+
+.projects {--glow-color: #00FF41;}
+.edu {--glow-color: #6EBBD5;}
+.about {--glow-color: #D4AF37;}
+.telegram {--glow-color: #2AABEE;}
+.github {--glow-color: #ffffff;}
+.whatsapp {--glow-color: #25D366;}
+.linkedin {--glow-color: #0077B5;}
+
+body 
+{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+
+    background: var(--background-color);
+}
+
+body.preload *{
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+}
+
+.first-wrapper
+{
+    position: relative;
+    margin-top: 20vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.name-wrapper
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-wrapper .name
+{
+    font-size: 2rem;
+    line-height: 1.8rem;
+
+    color: var(--font-color);
+}
+
+.name-wrapper .mail
+{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin-top: 0.6rem;
+    margin-left: 0.1rem;
+
+    color: var(--font-color);
+}
+
+header
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.3rem;
+}
+
+header .text
+{
+    font-family: Bungee;
+
+    font-size: 0.75rem;
+    line-height: 29px;
+
+    text-align: center;
+
+    color: var(--font-color);
+}
+
+.intro
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.intro .text
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+    padding-top: 20%;
+
+    color: var(--font-color);
+
+    width: 80%;
+}
+
+.text-wrapper
+{
+    display: flex;
+    position: relative;
+    top: 5%;
+    left: 5%;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 50%;
+}
+
+.menu
+{
+    width: 100%;
+}
+
+
+.links-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    width: calc(15% + 5rem);
+
+    position: relative;
+    left: 10%;
+}
+
+.link 
+{
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    border: 2px solid var(--font-color-darker);
+    
+    margin: 0.2rem;
+    display: flex;
+
+    transition: border-color var(--animation-time) ease;
+
+    animation: shadow-animation-out var(--animation-time);
+    animation-fill-mode: forwards;
+    
+    cursor: pointer;
+}
+
+@keyframes shadow-animation-in
+{
+    from 
+    {
+        box-shadow: inset 0 0 0.5rem 0 var(--background-color), 0 0 0.5rem 0 var(--background-color);
+    }
+
+    to 
+    {
+        box-shadow: inset 0px 0px 0.5rem 0px var(--glow-color), 0px 0px 0.5rem 0px var(--glow-color);
+    }
+}
+
+@keyframes shadow-animation-out
+{
+    from 
+    {
+        box-shadow: inset 0px 0px 0.5rem 0px var(--glow-color), 0px 0px 0.5rem 0px var(--glow-color);
+    }
+
+    to 
+    {
+        box-shadow: inset 0 0 0.5rem 0 var(--background-color), 0 0 0.5rem 0 var(--background-color);
+    }
+}
+
+.link .link-text 
+{
+    transition: color var(--animation-time) ease;
+    color: var(--font-color);
+}
+
+.link svg 
+{
+    stroke: var(--font-color);
+    transition: stroke var(--animation-time) ease 25ms;
+}
+
+.links-wrapper img, svg
+{
+    width: 16%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.link-text 
+{
+    margin-left: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.social .link
+{
+    display: flex;
+    width: 15%;
+    padding: 0.4rem;
+}
+
+.social svg
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hovered 
+{
+    border-color: var(--glow-color) !important;
+    animation: shadow-animation-in var(--animation-time);
+    animation-fill-mode: forwards;
+}
+
+.hovered svg
+{
+    stroke: var(--glow-color) !important;
+}
+
+.hovered .link-text
+{
+    color: var(--glow-color) !important;
+}

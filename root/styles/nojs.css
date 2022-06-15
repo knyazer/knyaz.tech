@@ -1,0 +1,16 @@
+.link:hover
+{
+    border-color: var(--glow-color);
+    animation: shadow-animation-in var(--animation-time);
+    animation-fill-mode: forwards;
+}
+
+.link:hover .link-text
+{
+    color: var(--glow-color);
+}
+
+.link:hover svg
+{
+    stroke: var(--glow-color);
+}
