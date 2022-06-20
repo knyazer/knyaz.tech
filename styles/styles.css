@@ -93,67 +93,6 @@ a {text-decoration: none !important;}
     flex-direction: column;
 }
 
-@media (max-width: 750px) 
-{
-    :root
-    {
-        font-size: 4vh;
-    }
-
-    .first-wrapper
-    {
-        flex-direction: column;
-        align-items: center;
-
-        margin-top: 2vh;
-    }
-
-    .text-wrapper
-    {
-        width: 95%;
-        left: 0;
-    }
-
-    .links-wrapper
-    {
-        margin-top: 20%;
-        width: calc(76% + 0.6rem); /* (80 % * 95%) */
-        right: 0;
-    }
-
-    .name-wrapper
-    {
-        text-align: center;
-    }
-
-    .text 
-    {
-        text-align: justify;
-    }
-
-    header
-    {
-        display: none !important;
-    }
-
-    .intro 
-    {
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    .link-text
-    {
-        margin: auto;
-    }
-
-    .social
-    {
-        margin-bottom: 0.4rem;
-    }
-}
-
-
 .name-wrapper .name
 {
     font-size: 2rem;
@@ -306,14 +245,13 @@ header .text
 .social .link
 {
     display: flex;
-    width: 15%;
     padding: 0.4rem;
 }
 
 .social svg
 {
-    width: 100%;
-    height: 100%;
+    width: min(2.4rem, 100%);
+    height: min(2.4rem, 100%);
     object-fit: contain;
 }
 
@@ -373,4 +311,21 @@ header .text
 
     animation: fade var(--animation-time);
     animation-fill-mode: forwards;
+}
+
+/*
+Mobile
+*/
+
+@media (max-aspect-ratio: 1/1)
+{
+    :root
+    {
+        font-size: calc(2vw + 2vh);
+    }
+
+    body
+    {
+        overflow-y: auto !important;
+    }
 }
