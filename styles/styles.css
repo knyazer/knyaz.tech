@@ -170,6 +170,7 @@ header
 
 header .text
 {
+    z-index: 9999;
     font-family: Bungee;
 
     font-size: 0.75rem;
@@ -325,7 +326,7 @@ header .text
     from
     {
         opacity: 1;
-        z-index: 9999;
+        z-index: 999;
     }
 
     50%
@@ -336,23 +337,23 @@ header .text
     99%
     {
         opacity: 0;
-        z-index: 9999;
+        z-index: 999;
     }
 
     to
     {
         display: none;
-        z-index: -9999;
+        z-index: -999;
     }
 }
 
 .loading-screen
 {
-    z-index: 9999;
+    z-index: 999;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    top: 3rem;
+    top: 0;
     left: 0;
 
     background-color: var(--background-color);
