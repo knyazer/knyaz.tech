@@ -309,6 +309,6 @@ header .text
 
     background-color: var(--background-color);
 
-    animation: fade var(--animation-time);
+    animation: fade 0.5s;
     animation-fill-mode: forwards;
 }
