@@ -52,10 +52,10 @@
 
     .intro
     {
-        width: 90%;
+        width: 80%;
 
         position: relative;
-        left: 5%;
+        left: 10%;
     }
 
     .intro .text
