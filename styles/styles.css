@@ -9,18 +9,34 @@
     --animation-time: 0.2s;
 
     text-align: justify;
+    
+    background: var(--background-color);
+    background-color: var(--background-color);
+}
+
+*:focus
+{
+    outline: none;
+}
+
+header a:focus
+{
+    outline: 0.12rem solid #fff;
+    border-radius: 0.12rem;
 }
 
 .projects {--glow-color: #00FF41;}
 .edu {--glow-color: #6EBBD5;}
 .about {--glow-color: #D4AF37;}
 .telegram {--glow-color: #2AABEE;}
-.github {--glow-color: #ffffff;}
+.github {--glow-color: #DDDDDD;}
 .whatsapp {--glow-color: #25D366;}
 .linkedin {--glow-color: #0077B5;}
 .instagram {--glow-color: #F58529;}
 .youtube {--glow-color: #FF0000;}
-.presentation {--glow-color: #D04423;}
+.presentation {--glow-color: #E2BB78;}
+.discord {--glow-color: #7289da;}
+.default {--glow-color: #AAAAAA; }
 
 body 
 {
@@ -29,6 +45,7 @@ body
     position: relative;
 
     background: var(--background-color);
+    background-color: var(--background-color);
 
     overflow-y: scroll;
 
@@ -38,11 +55,7 @@ body
 body::-webkit-scrollbar { background-color: rgba(128,128,128,0.15); }
 body::-webkit-scrollbar-thumb { background-color: rgba(128,128,128,0.5); }
 
-body.preload *{
-    animation-duration: 0s !important;
-    -webkit-animation-duration: 0s !important;
-    transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
-}
+a {text-decoration: none !important;}
 
 .first-wrapper
 {

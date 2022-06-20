@@ -42,29 +42,41 @@ if (!MOBILE) {
     // Allow keyboard controls
     document.onkeydown = function(e) {
         e = e || window.event;
-        if (e.code.indexOf("Arrow") == 0) {
+        if (e.code == "Enter") {
+            for (let j = 0; j < links.length; j++) {
+                if (links[j].classList.contains("hovered")) {
+                    links[j].click();
+                    break;
+                }
+            }
+        }
+
+        let tab = (e.code == "Tab" && !e.shiftKey);
+        let shiftTab = (e.code == "Tab" && e.shiftKey);
+
+        if (e.code.indexOf("Arrow") == 0 || tab || shiftTab) {
             for (let j = 0; j < links.length; j++) {
                 if (links[j].classList.contains("hovered")) {
                     links[j].classList.remove("hovered");
 
                     if (j >= 0 && j <= 2) {
-                        if (e.code == "ArrowUp") {
+                        if (e.code == "ArrowUp" || shiftTab) {
                             links[(j + links.length - 1) % links.length].classList.add("hovered");
                             break;
                         }
 
-                        if (e.code == "ArrowDown") {
+                        if (e.code == "ArrowDown" || tab) {
                             links[(j + links.length + 1) % links.length].classList.add("hovered");
                             break;
                         }
                     }
                     else {
-                        if (e.code == "ArrowLeft") {
+                        if (e.code == "ArrowLeft" || shiftTab) {
                             links[(j + links.length - 1) % links.length].classList.add("hovered");
                             break;
                         }
                         
-                        if (e.code == "ArrowRight") {
+                        if (e.code == "ArrowRight" || tab) {
                             links[(j + links.length + 1) % links.length].classList.add("hovered");
                             break;
                         }

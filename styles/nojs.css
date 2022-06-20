@@ -1,16 +1,16 @@
-.link:hover
+.link:hover, a:focus
 {
     border-color: var(--glow-color);
     animation: shadow-animation-in var(--animation-time);
     animation-fill-mode: forwards;
 }
 
-.link:hover .link-text
+.link:hover .link-text, a:focus .link-text
 {
     color: var(--glow-color);
 }
 
-.link:hover svg
+.link:hover svg, a:focus svg
 {
     stroke: var(--glow-color);
 }

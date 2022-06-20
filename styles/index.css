@@ -1,0 +1,25 @@
+body::-webkit-scrollbar { background-color: transparent; }
+body::-webkit-scrollbar-thumb { background-color: transparent; }
+
+.first-wrapper
+{
+    height: 90vh;
+    align-items: center;
+}
+
+.text-wrapper
+{
+    width: 60%;
+}
+
+.links-wrapper
+{
+    right: 8%;
+}
+
+.link .link-text
+{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
