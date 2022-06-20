@@ -6,7 +6,9 @@
     --font-color: #ccc;
     --font-color-lighter: #f0f0f0;
     --background-color: #222;
-    --animation-time: 0.3s;
+    --animation-time: 0.2s;
+
+    text-align: justify;
 }
 
 .projects {--glow-color: #00FF41;}
@@ -16,6 +18,9 @@
 .github {--glow-color: #ffffff;}
 .whatsapp {--glow-color: #25D366;}
 .linkedin {--glow-color: #0077B5;}
+.instagram {--glow-color: #F58529;}
+.youtube {--glow-color: #FF0000;}
+.presentation {--glow-color: #D04423;}
 
 body 
 {
@@ -24,7 +29,14 @@ body
     position: relative;
 
     background: var(--background-color);
+
+    overflow-y: scroll;
+
+    scrollbar-color: dark;
 }
+
+body::-webkit-scrollbar { background-color: rgba(128,128,128,0.15); }
+body::-webkit-scrollbar-thumb { background-color: rgba(128,128,128,0.5); }
 
 body.preload *{
     animation-duration: 0s !important;
@@ -34,12 +46,10 @@ body.preload *{
 
 .first-wrapper
 {
-    position: relative;
-    margin-top: 20vh;
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .text-wrapper
@@ -47,9 +57,9 @@ body.preload *{
     display: flex;
 
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
-    width: 50%;
+    width: 80%;
     position: relative;
     left: 5%;
 }
@@ -110,7 +120,7 @@ body.preload *{
 
     header
     {
-        visibility: hidden !important;
+        display: none !important;
     }
 
     .intro 
@@ -175,6 +185,8 @@ header .text
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+
+    width: 70%;
 }
 
 .intro .text
@@ -306,4 +318,45 @@ header .text
 .hovered .link-text
 {
     color: var(--glow-color) !important;
+}
+
+@keyframes fade
+{
+    from
+    {
+        opacity: 1;
+        z-index: 9999;
+    }
+
+    50%
+    {
+        opacity: 1;
+    }
+
+    99%
+    {
+        opacity: 0;
+        z-index: 9999;
+    }
+
+    to
+    {
+        display: none;
+        z-index: -9999;
+    }
+}
+
+.loading-screen
+{
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 3rem;
+    left: 0;
+
+    background-color: var(--background-color);
+
+    animation: fade var(--animation-time);
+    animation-fill-mode: forwards;
 }
