@@ -1,0 +1,89 @@
+
+@media (max-aspect-ratio: 1/1)
+{
+    :root
+    {
+        font-size: calc(2vw + 2vh);
+    }
+
+    body
+    {
+        overflow-y: auto !important;
+    }
+
+    header
+    {
+        display: none;
+        z-index: -999;
+    }
+
+    .first-wrapper, .first-following-wrapper
+    {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+
+        position: relative;
+        top: 2vh;
+    }
+
+    .text-wrapper
+    {
+        width: 100%;
+        left: 0;
+        justify-content: center;
+    }
+
+    .name-wrapper .name
+    {
+        text-align: center;
+        font-size: 10vw;
+        line-height: 12vw;
+    }
+
+    .name-wrapper .mail, .name-wrapper .date
+    {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-left: 0;
+        margin-top: 0.2rem;
+    }
+
+    .intro
+    {
+        width: 90%;
+
+        position: relative;
+        left: 5%;
+    }
+
+    .intro .text
+    {
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .links-wrapper
+    {
+        margin-top: 2rem;
+
+        width: 90vw;
+        justify-self: center;
+        right: auto !important;
+    }
+
+    .link
+    {
+        padding: 0.4rem;
+
+        height: 100%;
+        width: auto;
+    }
+
+    .link svg 
+    {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

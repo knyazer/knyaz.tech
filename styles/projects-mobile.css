@@ -1,0 +1,52 @@
+@media (max-aspect-ratio: 1/1)
+{
+    header
+    {
+        display: flex;
+        z-index: 0;
+    }
+
+    .first-wrapper, .first-following-wrapper
+    {
+        margin-top: 0;
+        flex-direction: column-reverse;
+        top: 0;
+    }
+
+    .text-wrapper
+    {
+        margin-top: 1rem;
+    }
+
+    .links-local-wrapper
+    {
+        margin-bottom: 1rem;
+    }
+
+    hr 
+    {
+        display: block;
+    }
+
+    .helper
+    {
+        display: none;
+        z-index: -999;
+    }
+
+    .pic-wrapper
+    {
+        width: 90%;
+        height: auto;
+        padding: 0;
+        align-self: center;
+
+        margin-top: 3vh;
+    }
+
+    .first-following-wrapper
+    {
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+}

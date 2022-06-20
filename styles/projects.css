@@ -8,6 +8,15 @@ li
     margin-bottom: 0.5rem;
 }
 
+hr
+{
+    display: none;
+    border-color: var(--font-color-darker);
+    border-width: 0.12rem;
+    border-left: none;
+    border-right: none;
+}
+
 .text-wrapper
 {
     justify-content: baseline;
@@ -110,13 +119,6 @@ li
     object-fit: contain;
     width: 100%;
     height: 100%;
-
-    /*
-    padding: 0.5rem;
-    border: 0.12rem var(--font-color-darker) solid;
-    border-radius: 1rem;
-    */
-
 }
 
 .text-wrapper

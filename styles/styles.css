@@ -312,20 +312,3 @@ header .text
     animation: fade var(--animation-time);
     animation-fill-mode: forwards;
 }
-
-/*
-Mobile
-*/
-
-@media (max-aspect-ratio: 1/1)
-{
-    :root
-    {
-        font-size: calc(2vw + 2vh);
-    }
-
-    body
-    {
-        overflow-y: auto !important;
-    }
-}
