@@ -17,6 +17,7 @@ hr
     border-width: 0.12rem;
     border-left: none;
     border-right: none;
+    margin-top: 2rem;
 }
 
 .text-wrapper
@@ -171,8 +172,8 @@ hr
 {
     header
     {
-        display: flex;
-        z-index: 0;
+        display: flex !important;
+        z-index: 999 !important;
     }
 
     .first-wrapper, .first-following-wrapper
