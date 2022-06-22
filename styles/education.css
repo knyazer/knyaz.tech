@@ -10,6 +10,7 @@
     --cell-width: 20vw;
     --cell-margin: 5vw;
     --border-round-factor: 4;
+    --font-size: 2vw !important;
 }
 
 .header
@@ -103,19 +104,103 @@
 
 .event .cell .header
 {
-    font-size: 2vw;
+    font-size: var(--font-size);
     text-align: center;
     border-bottom: var(--border-size) solid var(--color);
 
     position: relative;
     left: 10%;
     width: 80%;
+
+    margin-top: 0.4rem;
 }
 
 .event .cell .text
 {
-    font-size: 1.4vw;
+    font-size: calc(var(--font-size) * 0.7);
 
     padding-left: 1vw;
     padding-right: 1vw;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    :root
+    {
+        font-size: calc(2vw + 2vh) !important;
+    }
+
+    header .text
+    {
+        font-size: 0.75rem;
+    }
+
+    .header
+    {
+        font-size: 10vw;
+    }
+
+    .container
+    {
+        margin-top: 5vh;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        --font-size: 32px;
+    }
+
+    .period
+    {
+        display: none !important;
+    }
+
+    .connector
+    {
+        display: none !important;
+    }
+
+    .event
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+
+        width: 80vw;
+        height: auto;
+
+        margin-top: 5vh;
+    }
+
+    .event .cell
+    {
+        position: relative;
+        
+        left: auto;
+        right: auto;
+        top: auto;
+
+        height: auto;
+        width: auto;
+    }
+    
+    .event .cell .header
+    {
+        font-size: 1.4rem;
+    }
+
+    .event .cell .text
+    {
+        padding-left: 4vw;
+        padding-right: 4vw;
+
+        font-size: 1rem;
+    }
 }
