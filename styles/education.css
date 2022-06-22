@@ -29,9 +29,29 @@
 
     position: relative;
     top: calc(var(--cell-width) / 2 - 18vw);
-    left: 5vw;
+    left: 2vw;
 
     color: var(--font-color);
+}
+
+.timeline
+{
+    position: absolute;
+
+    left: 101%;
+}
+
+.timeline p
+{
+    position: relative;
+    margin-top: calc(var(--height-unit) * 2 - 1rem);
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.timeline .first 
+{
+    margin-top: var(--height-unit);
 }
 
 .event
@@ -143,6 +163,7 @@
     .container
     {
         margin-top: 5vh;
+        left: 5vw;
 
         display: flex;
         flex-direction: column;
@@ -158,6 +179,11 @@
     }
 
     .connector
+    {
+        display: none !important;
+    }
+
+    .timeline
     {
         display: none !important;
     }
