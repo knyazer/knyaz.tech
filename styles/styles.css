@@ -327,18 +327,13 @@ header .text
     body
     {
         overflow-y: auto !important;
-    }
-
-    header
-    {
-        display: none !important;
-        z-index: -999 !important;
+        overflow-x: hidden;
     }
 
     .first-wrapper, .first-following-wrapper
     {
         flex-direction: column !important;
-        width: 100% !important;
+        width: 100vw !important;
         height: auto !important;
 
         position: relative !important;

@@ -1,0 +1,60 @@
+.me
+{
+    position: relative;
+    right: 5%;
+    top: 0vh;
+
+    width: 35%;
+    height: 70vh;
+
+    color: var(--font-color);
+    text-align: center;
+}
+
+.me img
+{
+    object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+.me p
+{
+    position: relative;
+    top: -1rem;
+    font-style: italic;
+}
+
+.intro
+{
+    width: 90%;
+}
+
+.intro .text
+{
+    padding-top: 10%;
+}
+
+@media (max-aspect-ratio: 1/1)
+{
+    .me 
+    {
+        width: 90%;
+        height: auto;
+
+        left: auto;
+        right: auto;
+        margin-top: 10%;
+    }
+
+    .intor .name
+    {
+
+    }
+
+    .intro .text 
+    {
+        padding-top: 4vh !important;
+    }
+}
