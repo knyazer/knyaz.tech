@@ -311,6 +311,6 @@ header .text
 
     background-color: var(--background-color);
 
-    animation: fade 0.5s;
+    animation: fade 0.3s;
     animation-fill-mode: forwards;
 }
