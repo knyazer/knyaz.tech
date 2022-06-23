@@ -90,6 +90,11 @@
     background-color: var(--background-color);
 }
 
+.event .subscript
+{
+    display: none;
+}
+
 .event .noend
 {
     border-bottom-left-radius: 0;
@@ -140,9 +145,11 @@
 .event .cell .text
 {
     font-size: calc(var(--font-size) * 0.7);
+    margin-top: 1rem;
 
     padding-left: 1vw;
     padding-right: 1vw;
+    padding-bottom: 1vw;
 }
 
 @media (max-aspect-ratio: 1/1)
@@ -150,6 +157,11 @@
     :root
     {
         font-size: calc(2vw + 2vh) !important;
+    }
+
+    .event .not-important
+    {
+        display: none;
     }
 
     header .text
@@ -224,10 +236,22 @@
         font-size: 1.4rem;
     }
 
+    .event .cell .subscript
+    {
+        display: block;
+        font-size: 0.8rem;
+        font-style: italic;
+        text-align: center;
+        margin-top: 0.3rem;
+        margin-bottom: 0.2rem;
+    }
+
     .event .cell .text
     {
         padding-left: 4vw;
         padding-right: 4vw;
+        padding-bottom: 2vw;
+        margin-top: 0;
 
         font-size: 1rem;
     }
