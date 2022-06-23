@@ -172,11 +172,12 @@
     .header
     {
         font-size: 10vw;
+        margin-top: 1vh;
     }
 
     .container
     {
-        margin-top: 5vh;
+        margin-top: 2vh;
         left: 5vw;
 
         display: flex;

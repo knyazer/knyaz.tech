@@ -38,3 +38,17 @@ body::-webkit-scrollbar-thumb { background-color: transparent; }
     justify-self: center;
     align-self: center;
 }
+
+@media (max-aspect-ratio: 1/1)
+{
+    .links-wrapper
+    {
+        width: 80% !important;
+    }
+
+    .links-wrapper svg 
+    {
+        max-width: 100%;
+        height: auto !important;
+    }
+}
