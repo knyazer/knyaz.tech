@@ -159,9 +159,9 @@
         font-size: calc(2vw + 2vh) !important;
     }
 
-    .event .not-important
+    .not-important
     {
-        display: none;
+        display: none !important;
     }
 
     header .text
