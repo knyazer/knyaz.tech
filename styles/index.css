@@ -10,11 +10,26 @@ body::-webkit-scrollbar-thumb { background-color: transparent; }
 .text-wrapper
 {
     width: 60%;
+
+    position: relative;
+    left: 7%;
 }
 
-.links-wrapper
+.intro .text
 {
-    right: 8%;
+    width: 60%;
+}
+
+.links-wrapper 
+{
+    position: relative;
+    right: 10%;
+}
+
+.links-wrapper svg
+{
+    width: 2.4rem;
+    height: 2.4rem;
 }
 
 .link .link-text

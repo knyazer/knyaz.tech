@@ -16,7 +16,6 @@
     .first-wrapper, .first-following-wrapper
     {
         flex-direction: column !important;
-        width: 100vw !important;
         height: auto !important;
 
         position: relative !important;

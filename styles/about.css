@@ -1,10 +1,19 @@
-.me
+.first-wrapper
+{
+    justify-content: center;
+}
+
+.text-wrapper
 {
     position: relative;
-    right: 5%;
-    top: 0vh;
+    left: 0%;
 
-    width: 35%;
+    padding-left: 7%;
+}
+
+.me
+{
+    width: 45%;
     height: 70vh;
 
     color: var(--font-color);
@@ -26,18 +35,19 @@
     font-style: italic;
 }
 
-.intro
-{
-    width: 90%;
-}
-
 .intro .text
 {
     padding-top: 10%;
+    width: 85%;
 }
 
 @media (max-aspect-ratio: 1/1)
 {
+    .text-wrapper
+    {
+        padding-left: 0;
+    }
+
     .me 
     {
         width: 90%;

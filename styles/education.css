@@ -21,6 +21,8 @@
     font-size: 2rem;
     text-align: center;
     color: var(--font-color);
+
+    z-index: 100;
 }
 
 .container

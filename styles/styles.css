@@ -59,12 +59,17 @@ body::-webkit-scrollbar-thumb { background-color: rgba(128,128,128,0.5); }
 
 a {text-decoration: none !important;}
 
-.first-wrapper
+.first-wrapper, .first-following-wrapper
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: nowrap;
+
+    width: 92vw;
+
+    position: relative;
+    left: 4vw;
 }
 
 .text-wrapper
@@ -75,18 +80,12 @@ a {text-decoration: none !important;}
     flex-wrap: nowrap;
 
     width: 80%;
-    position: relative;
-    left: 5%;
 }
 
 .links-wrapper
 {
     display: flex;
     flex-direction: column;
-    width: calc(15% + 5rem);
-
-    position: relative;
-    right: 5%;
 }
 
 .name-wrapper
@@ -138,10 +137,10 @@ header .text
 .intro
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
 
-    width: 70%;
+    width: 100%;
 }
 
 .intro .text
@@ -151,11 +150,11 @@ header .text
     font-size: 1rem;
     line-height: 1.25rem;
 
-    padding-top: 20%;
+    padding-top: 15%;
 
     color: var(--font-color);
 
-    width: 80%;
+    width: auto;
 }
 
 .menu
@@ -253,8 +252,8 @@ header .text
 
 .social svg
 {
-    width: min(2.4rem, 100%);
-    height: min(2.4rem, 100%);
+    width: 2.4rem;
+    height: 2.4rem;
     object-fit: contain;
 }
 

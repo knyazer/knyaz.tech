@@ -2,7 +2,27 @@
 
 :root
 {
-    --intro-width: 80%;
+    --intro-width: 90%;
+    font-size: min(1.9vw, 2.9vh);
+}
+
+@media (min-aspect-ratio: 20/9)
+{
+    :root 
+    {
+        font-size: min(2.4vw, 3.5vh);
+    }
+}
+
+header
+{
+    padding-top: calc(0.3 * max(1.5vw, 1.5vh));
+}
+
+header .text 
+{
+    font-size: calc(0.75 * max(1.5vw, 1.5vh));
+    line-height: max(1.5vw, 1.5vh); 
 }
 
 li 
@@ -26,45 +46,6 @@ hr
     width: 60%;
 }
 
-.intro
-{
-    width: var(--intro-width);
-}
-
-.links-local-wrapper
-{
-    display: flex;
-    flex-direction: row;
-
-    width: var(--intro-width);
-
-    justify-content: baseline;
-    align-items: center;
-}
-
-@media (max-width: 750px) 
-{
-    .links-local-wrapper
-    {
-        position: relative;
-        left: 10%;
-    }
-}
-
-.links-local-wrapper svg
-{
-    width: 2rem;
-    height: 2rem;
-    object-fit: contain;
-}
-
-.link
-{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    max-width: 3rem;
-}
-
 .first-wrapper
 {
     margin-top: 7vh;
@@ -86,23 +67,48 @@ hr
     color: var(--font-color);
 }
 
+.intro
+{
+    width: var(--intro-width);
+}
+
 .intro .text
 {
     width: 100%;
     padding-top: 7vh;
-    font-size: 3vh;
-    line-height: 3.5vh;
+
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.links-local-wrapper
+{
+    display: flex;
+    flex-direction: row;
+
+    width: var(--intro-width);
+
+    justify-content: baseline;
+    align-items: center;
+}
+
+.links-local-wrapper svg
+{
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.link
+{
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
 }
 
 .first-following-wrapper
 {
     margin-top: 7vh;
     height: calc(100vh - 7vh);
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
 }
 
 .pic-wrapper
@@ -111,8 +117,6 @@ hr
 
     flex-direction: column;
     flex-wrap: nowrap;
-
-    padding-right: 3rem;
 
     height: 70vh;
 }
@@ -178,9 +182,9 @@ hr
 
     .first-wrapper, .first-following-wrapper
     {
-        margin-top: 0;
+        margin-top: 0 !important;
         flex-direction: column-reverse;
-        top: 0;
+        top: 0 !important;
     }
 
     .text-wrapper
@@ -218,5 +222,16 @@ hr
     {
         height: auto;
         margin-bottom: 0.5rem;
+    }
+
+    header
+    {
+        padding-top: 0.3rem;
+    }
+
+    header .text 
+    {
+        font-size: 0.75rem;
+        line-height: 1rem; 
     }
 }
