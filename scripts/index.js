@@ -39,8 +39,11 @@ if (!MOBILE) {
     // Activate the very first link
     links[0].classList.add("hovered");
 
+    let socialLength = document.getElementsByClassName("social")[0].children.length;
+    let controlsLength = links.length - socialLength;
+
     // Allow keyboard controls
-    document.onkeydown = function(e) {
+    document.onkeyup = function(e) {
         e = e || window.event;
         if (e.code == "Enter") {
             for (let j = 0; j < links.length; j++) {
@@ -59,7 +62,7 @@ if (!MOBILE) {
                 if (links[j].classList.contains("hovered")) {
                     links[j].classList.remove("hovered");
 
-                    if (j >= 0 && j <= 2) {
+                    if (j < controlsLength) {
                         if (e.code == "ArrowUp" || shiftTab) {
                             links[(j + links.length - 1) % links.length].classList.add("hovered");
                             break;
@@ -82,7 +85,7 @@ if (!MOBILE) {
                         }
 
                         if (e.code == "ArrowUp") {
-                            links[2].classList.add("hovered");
+                            links[controlsLength - 1].classList.add("hovered");
                             break;
                         }
                         

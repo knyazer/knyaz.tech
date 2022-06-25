@@ -19,3 +19,14 @@ window.onscroll = function() {
         hideHelper();
     }
 }
+
+// On escape press go to root
+document.onkeyup = function(e) {
+    e = e || window.event;
+    console.log(e.code);
+
+    if (e.code == "Escape")
+    {
+        document.location.href = "../";
+    }
+}

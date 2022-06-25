@@ -1,12 +1,28 @@
+ul 
+{
+    padding-left: 1.4rem;
+}
+
+li 
+{
+    text-align: left;
+}
+
+body::-webkit-scrollbar { background-color: transparent; }
+body::-webkit-scrollbar-thumb { background-color: transparent; }
+
 .first-wrapper
 {
+    height: 90vh;
     justify-content: center;
+    align-items: center;
 }
 
 .text-wrapper
 {
     position: relative;
     left: 0%;
+    width: 60%;
 
     padding-left: 7%;
 }
@@ -61,5 +77,13 @@
     .intro .text 
     {
         padding-top: 2vh !important;
+    }
+}
+
+@media (min-aspect-ratio: 5/2)
+{
+    :root
+    {
+        font-size: 0.9rem;
     }
 }
