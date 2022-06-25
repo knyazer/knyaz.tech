@@ -21,7 +21,7 @@ window.onscroll = function() {
 }
 
 // On escape press go to root
-document.onkeyup = function(e) {
+document.onkeydown = function(e) {
     e = e || window.event;
     console.log(e.code);
 

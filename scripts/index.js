@@ -43,7 +43,7 @@ if (!MOBILE) {
     let controlsLength = links.length - socialLength;
 
     // Allow keyboard controls
-    document.onkeyup = function(e) {
+    document.onkeydown = function(e) {
         e = e || window.event;
         if (e.code == "Enter") {
             for (let j = 0; j < links.length; j++) {
