@@ -33,11 +33,15 @@ for (let i = 0; i < links.length; i++) {
             this.classList.remove("hovered");
         }
     }
+
+    // For each link set tabindex -1 as tab controlled by the script
+    links[i].setAttribute("tabindex", "-1");
 }
 
 if (!MOBILE) {
     // Activate the very first link
     links[0].classList.add("hovered");
+    links[0].focus();
 
     let socialLength = document.getElementsByClassName("social")[0].children.length;
     let controlsLength = links.length - socialLength;
@@ -45,17 +49,10 @@ if (!MOBILE) {
     // Allow keyboard controls
     document.onkeydown = function(e) {
         e = e || window.event;
-        if (e.code == "Enter") {
-            for (let j = 0; j < links.length; j++) {
-                if (links[j].classList.contains("hovered")) {
-                    links[j].click();
-                    break;
-                }
-            }
-        }
 
         let tab = (e.code == "Tab" && !e.shiftKey);
         let shiftTab = (e.code == "Tab" && e.shiftKey);
+        let preventTab = true;
 
         if (e.code.indexOf("Arrow") == 0 || tab || shiftTab) {
             for (let j = 0; j < links.length; j++) {
@@ -64,6 +61,9 @@ if (!MOBILE) {
 
                     if (j < controlsLength) {
                         if (e.code == "ArrowUp" || shiftTab) {
+                            if (j == 0)
+                                preventTab = false;
+                                
                             links[(j + links.length - 1) % links.length].classList.add("hovered");
                             break;
                         }
@@ -80,7 +80,11 @@ if (!MOBILE) {
                         }
                         
                         if (e.code == "ArrowRight" || tab) {
+                            if (j == links.length - 1)
+                                preventTab = false;
+
                             links[(j + links.length + 1) % links.length].classList.add("hovered");
+                            
                             break;
                         }
 
@@ -99,6 +103,15 @@ if (!MOBILE) {
 
                     break;
                 }
+            }
+            
+            if (preventTab)
+                e.preventDefault();
+        }
+
+        for (let j = 0; j < links.length; j++) {
+            if (links[j].classList.contains("hovered")) {
+                links[j].focus();
             }
         }
     }
