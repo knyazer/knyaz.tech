@@ -118,6 +118,12 @@ ul
     margin-left: 0.1rem;
 
     color: var(--font-color);
+    transition: all var(--animation-time) ease;
+}
+
+.name-wrapper .mail:hover
+{
+    color: var(--font-color-lighter);
 }
 
 header
