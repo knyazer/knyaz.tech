@@ -3,7 +3,7 @@
 :root
 {
     font-size: max(1.5vw, 1.5vh);
-    font-family: Viga;
+    font-family: 'Poppins', 'Poppins', 'helvetica neue', helvetica, arial, sans-serif;
     --font-color-darker: #888;
     --font-color: #ccc;
     --font-color-lighter: #f0f0f0;
@@ -25,6 +25,14 @@ header a:focus
 {
     outline: 0.12rem solid #fff;
     border-radius: 0.12rem;
+}
+
+a {
+    color: #0099B5;
+}
+
+a:hover {
+    color: #33BBD5;
 }
 
 .projects {--glow-color: #00FF41;}
@@ -164,7 +172,7 @@ header .text
     font-size: 1rem;
     line-height: 1.25rem;
 
-    padding-top: 15%;
+    padding-top: 8%;
 
     color: var(--font-color);
 
@@ -328,3 +336,4 @@ header .text
     animation: fade 0.5s;
     animation-fill-mode: forwards;
 }
+

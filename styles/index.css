@@ -1,6 +1,11 @@
 body::-webkit-scrollbar { background-color: transparent; }
 body::-webkit-scrollbar-thumb { background-color: transparent; }
 
+:root
+{
+    font-family: Viga;
+}
+
 .first-wrapper
 {
     height: 90vh;
@@ -44,11 +49,29 @@ body::-webkit-scrollbar-thumb { background-color: transparent; }
     .links-wrapper
     {
         width: 80% !important;
+	align-self: center;
+	justify-content: center;
+	padding-top: 30% !important;
     }
 
     .links-wrapper svg 
     {
         max-width: 100%;
         height: auto !important;
+    }
+
+    .intro .text 
+    {
+        display: none;
+    }
+
+    .name-wrapper
+    {
+        font-size: 1.6rem;
+    }
+
+    header .text
+    {
+        display: none;
     }
 }

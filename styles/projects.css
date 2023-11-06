@@ -54,6 +54,7 @@ hr
 
 .name-wrapper .name
 {
+    font-family: Viga !important;
     font-size: min(6rem, 6vh);
     line-height: min(6rem, 6vh);
 }
@@ -77,8 +78,8 @@ hr
     width: 100%;
     padding-top: 7vh;
 
-    font-size: 1rem;
-    line-height: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
 }
 
 .links-local-wrapper
@@ -185,6 +186,9 @@ hr
         margin-top: 0 !important;
         flex-direction: column-reverse;
         top: 0 !important;
+	margin-left: -7% !important;
+	margin-right: 0px !important;
+	width: 105% !important;
     }
 
     .text-wrapper
@@ -231,7 +235,13 @@ hr
 
     header .text 
     {
-        font-size: 0.75rem;
-        line-height: 1rem; 
+        font-size: 0.6rem !important;
+        line-height: 0.2rem !important; 
+    }
+
+    .intro .text
+    {
+        font-size: 0.7rem !important;
+	line-height: 0.85rem !important;
     }
 }
